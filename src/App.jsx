@@ -7,6 +7,7 @@ import TripleJs from "./assets/TripleJs.png";
 import { LinkedinLogo, GithubLogo, Envelope, MapPin } from "phosphor-react";
 
 function App() {
+
   const projects = [
     {
       date: "2025",
@@ -201,107 +202,76 @@ function App() {
 
       {/* Contact Section */}
       <section id="contact" className="px-4 sm:px-8 md:px-20 py-16 md:py-28 border-t border-gray-600 font-poppins bg-white">
-        {/* Header */}
-        <div className="h-auto md:h-[120px] w-full flex justify-start md:justify-end items-center border-b border-gray-600 py-4 md:py-0 mb-8 md:mb-16">
-          <h1 className="text-4xl md:text-7xl font-[800] pb-3">get in touch.</h1>
-        </div>
-
-        <div className="flex flex-col lg:flex-row gap-12 md:gap-20">
-          {/* Left side - contact info */}
-          <div className="w-full lg:w-1/2 flex flex-col justify-center">
-            <p className="text-2xl md:text-3xl mb-5 font-[600] text-gray-800">Let's work together!</p>
-            <p className="text-gray-600 mb-8 text-base md:text-lg leading-relaxed">
+        <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
+          {/* Main Content */}
+          <div className="w-full flex flex-col justify-center items-center">
+            <p className="text-2xl md:text-4xl mb-6 font-[600] text-gray-800">Let's work together!</p>
+            <p className="text-gray-600 mb-12 text-lg md:text-xl leading-relaxed max-w-2xl">
               Have a project idea, question, or opportunity? Feel free to reach out
-              — I'd love to connect and discuss how we can bring your ideas to life.
             </p>
 
-            <div className="space-y-4 text-base md:text-lg">
-              <div className="flex items-center gap-3">
-                <Envelope size={24} className="text-green-600" weight="duotone" />
-                <span className="text-gray-800 font-medium">caquino.dev@gmail.com</span>
+            {/* Contact Info Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 w-full max-w-2xl">
+              {/* Email Card */}
+              <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-green-600 transition-all duration-300 hover:shadow-lg group">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-green-600 transition-colors duration-300">
+                    <Envelope size={28} className="text-green-600 group-hover:text-white" weight="duotone" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-2">Email Me</h3>
+                  <a 
+                    href="mailto:caquino.dev@gmail.com" 
+                    className="text-green-600 hover:text-green-700 font-medium text-lg transition-colors duration-300"
+                  >
+                    caquino.dev@gmail.com
+                  </a>
+                </div>
               </div>
-              <div className="flex items-center gap-3">
-                <MapPin size={24} className="text-green-600" weight="duotone" />
-                <span className="text-gray-800 font-medium">Cavite, Philippines</span>
+
+              {/* Location Card */}
+              <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:border-green-600 transition-all duration-300 hover:shadow-lg group">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-green-600 transition-colors duration-300">
+                    <MapPin size={28} className="text-green-600 group-hover:text-white" weight="duotone" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-2">Based In</h3>
+                  <p className="text-gray-700 font-medium text-lg">Cavite, Philippines</p>
+                </div>
               </div>
             </div>
 
-            {/* Social Links with Icons */}
-            <div className="mt-8 flex gap-6">
-              <a 
-                href="https://www.linkedin.com/in/christian-aquino-189945383/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-600 hover:text-green-600 transition-colors duration-300 group"
-              >
-                <LinkedinLogo size={24} weight="duotone" />
-                <span className="text-sm md:text-base group-hover:translate-x-1 transition-transform duration-300">
-                  LinkedIn
-                </span>
-              </a>
-              <a 
-                href="https://github.com/CAquino-dev" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-600 hover:text-green-600 transition-colors duration-300 group"
-              >
-                <GithubLogo size={24} weight="duotone" />
-                <span className="text-sm md:text-base group-hover:translate-x-1 transition-transform duration-300">
-                  GitHub
-                </span>
-              </a>
+            {/* Social Links */}
+            <div className="mb-12">
+              <p className="text-gray-600 mb-6 text-lg">Or connect with me on</p>
+              <div className="flex gap-8 justify-center">
+                <a 
+                  href="https://www.linkedin.com/in/christian-aquino-189945383/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-3 text-gray-600 hover:text-green-600 transition-all duration-300 group"
+                >
+                  <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-green-600 group-hover:scale-110 transition-all duration-300">
+                    <LinkedinLogo size={28} weight="duotone" className="group-hover:text-white" />
+                  </div>
+                  <span className="text-sm font-medium group-hover:translate-y-1 transition-transform duration-300">
+                    LinkedIn
+                  </span>
+                </a>
+                <a 
+                  href="https://github.com/CAquino-dev" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-3 text-gray-600 hover:text-green-600 transition-all duration-300 group"
+                >
+                  <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-green-600 group-hover:scale-110 transition-all duration-300">
+                    <GithubLogo size={28} weight="duotone" className="group-hover:text-white" />
+                  </div>
+                  <span className="text-sm font-medium group-hover:translate-y-1 transition-transform duration-300">
+                    GitHub
+                  </span>
+                </a>
+              </div>
             </div>
-          </div>
-
-          {/* Right side - contact form */}
-          <div className="w-full lg:w-1/2">
-            <form className="flex flex-col gap-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    className="w-full p-4 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:border-green-600 focus:ring-2 focus:ring-green-600/20 transition-all duration-300 text-gray-800 placeholder-gray-400"
-                    required
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    className="w-full p-4 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:border-green-600 focus:ring-2 focus:ring-green-600/20 transition-all duration-300 text-gray-800 placeholder-gray-400"
-                    required
-                  />
-                </div>
-              </div>
-              <div>
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  className="w-full p-4 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:border-green-600 focus:ring-2 focus:ring-green-600/20 transition-all duration-300 text-gray-800 placeholder-gray-400"
-                  required
-                />
-              </div>
-              <div>
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  rows="6"
-                  className="w-full p-4 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:border-green-600 focus:ring-2 focus:ring-green-600/20 transition-all duration-300 text-gray-800 placeholder-gray-400 resize-vertical"
-                  required
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="px-8 py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl max-w-fit flex items-center gap-2"
-              >
-                <Envelope size={20} weight="duotone" />
-                Send Message
-              </button>
-            </form>
           </div>
         </div>
       </section>
