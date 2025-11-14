@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import kuri from "./assets/kuri.jpg";
 import DUV from "./assets/DUV.png";
 import image from "./assets/gameImage.png";
 import WorldPeas from "./assets/WorldPeas.png";
 import TripleJs from "./assets/TripleJs.png";
-import { LinkedinLogo, GithubLogo, Envelope, MapPin } from "phosphor-react";
+import { LinkedinLogo, GithubLogo, Envelope, MapPin, List, X } from "phosphor-react";
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const projects = [
     {
@@ -36,14 +37,36 @@ function App() {
     },
   ];
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className="font-poppins">
       {/* Navbar */}
       <nav className="text-black px-4 sm:px-8 md:px-20 py-4 md:py-5 flex justify-between items-center fixed w-full bg-white z-50 shadow-md">
-        <p className="font-bold text-lg md:text-xl hover:text-green-600 cursor-pointer">
-          @Christian Aquino
-        </p>
-        <ul className="flex gap-4 md:gap-8 text-sm md:text-base font-semibold md:text-[20px]">
+        {/* Desktop: Show text, Mobile: Show image */}
+        <div className="flex items-center">
+          {/* Desktop Text */}
+          <p className="hidden md:block font-bold text-lg md:text-xl hover:text-green-600 cursor-pointer">
+            @Christian Aquino
+          </p>
+          {/* Mobile Image */}
+          <div className="md:hidden w-10 h-10 overflow-hidden rounded-lg">
+            <img
+              src={image}
+              alt="Christian Aquino"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+            />
+          </div>
+        </div>
+
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex gap-8 text-base font-semibold">
           <li>
             <a href="#home" className="hover:text-green-600 transition-colors duration-300">
               Home
@@ -65,6 +88,51 @@ function App() {
             </a>
           </li>
         </ul>
+
+        {/* Mobile Hamburger Menu */}
+        <div className="md:hidden relative">
+          <button
+            onClick={toggleMenu}
+            className="p-2 text-gray-700 hover:text-green-600 transition-colors duration-300"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <List size={24} />}
+          </button>
+
+          {/* Mobile Menu Dropdown */}
+          {isMenuOpen && (
+            <div className="absolute right-0 top-12 bg-white shadow-lg rounded-lg border border-gray-200 min-w-[180px] py-2 z-40">
+              <a
+                href="#home"
+                className="block px-4 py-3 hover:bg-green-50 hover:text-green-600 transition-colors duration-300 font-medium"
+                onClick={closeMenu}
+              >
+                Home
+              </a>
+              <a
+                href="#about"
+                className="block px-4 py-3 hover:bg-green-50 hover:text-green-600 transition-colors duration-300 font-medium"
+                onClick={closeMenu}
+              >
+                About
+              </a>
+              <a
+                href="#projects"
+                className="block px-4 py-3 hover:bg-green-50 hover:text-green-600 transition-colors duration-300 font-medium"
+                onClick={closeMenu}
+              >
+                Projects
+              </a>
+              <a
+                href="#contact"
+                className="block px-4 py-3 hover:bg-green-50 hover:text-green-600 transition-colors duration-300 font-medium"
+                onClick={closeMenu}
+              >
+                Contact
+              </a>
+            </div>
+          )}
+        </div>
       </nav>
 
       {/* Home Section */}
@@ -107,14 +175,13 @@ function App() {
               </span>.
             </p>
             <p className="text-base md:text-lg leading-relaxed text-gray-700">
-              As an aspiring web developer, I'm passionate about creating engaging
-              online experiences. I'm constantly learning and experimenting with
-              coding languages like <span className="font-semibold">HTML</span>,{" "}
-              <span className="font-semibold">CSS</span>, and{" "}
-              <span className="font-semibold">JavaScript</span> to bring ideas to life
-              on the web. With a keen eye for design and a love for problem-solving,
-              I'm excited to delve deeper into the world of web development and
-              contribute my creativity to the digital realm.
+              As an aspiring full-stack developer, 
+              I'm passionate about building smooth and engaging web experiences. 
+              I'm constantly learning and improving my skills using technologies like 
+              <span className="font-semibold">React.js</span>, <span className="font-semibold">Node.js</span>, 
+              <span className="font-semibold">Express</span>, and <span className="font-semibold">MySQL</span> 
+              to bring ideas to life on the web. With a strong focus on clean design, functionality, and problem-solving,
+              I'm excited to dive deeper into real-world development and create meaningful solutions in the digital space.
             </p>
           </div>
 
