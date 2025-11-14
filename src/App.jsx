@@ -177,9 +177,9 @@ function App() {
             <p className="text-base md:text-lg leading-relaxed text-gray-700">
               As an aspiring full-stack developer, 
               I'm passionate about building smooth and engaging web experiences. 
-              I'm constantly learning and improving my skills using technologies like 
-              <span className="font-semibold">React.js</span>, <span className="font-semibold">Node.js</span>, 
-              <span className="font-semibold">Express</span>, and <span className="font-semibold">MySQL</span> 
+              I'm constantly learning and improving my skills using technologies like  
+              <span className="font-semibold"> React.js</span>, <span className="font-semibold"> Node.js</span>, 
+              <span className="font-semibold"> Express</span>, and <span className="font-semibold">MySQL </span> 
               to bring ideas to life on the web. With a strong focus on clean design, functionality, and problem-solving,
               I'm excited to dive deeper into real-world development and create meaningful solutions in the digital space.
             </p>
