@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/src/style.css" rel="stylesheet">
     <title>@ChristianAquino</title>
+    <script type="module">
+      import Chatbox from 'https://cdn.jsdelivr.net/npm/@chaindesk/embeds@latest/dist/chatbox/index.js';
+
+      const widget = await Chatbox.initBubble({
+        agentId: 'cmkdls6pf0bx6iz0r6ut2szdj',
+      });
+
+      // open the chat bubble
+      widget.open();
+    </script>
   </head>
   <body>
     <div id="root"></div>
