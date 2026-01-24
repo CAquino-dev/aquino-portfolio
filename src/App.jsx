@@ -78,6 +78,11 @@ function App() {
             </a>
           </li>
           <li>
+            <a href="#experience" className="hover:text-green-600 transition-colors duration-300">
+              Experience
+            </a>
+          </li>
+          <li>
             <a href="#projects" className="hover:text-green-600 transition-colors duration-300">
               Projects
             </a>
@@ -115,6 +120,13 @@ function App() {
                 onClick={closeMenu}
               >
                 About
+              </a>
+              <a
+                href="#experience"
+                className="block px-4 py-3 hover:bg-green-50 hover:text-green-600 transition-colors duration-300 font-medium"
+                onClick={closeMenu}
+              >
+                Experience
               </a>
               <a
                 href="#projects"
@@ -194,6 +206,118 @@ function App() {
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" className="px-4 sm:px-8 md:p-20 min-h-screen font-poppins">
+        {/* Header */}
+        <div className="h-auto md:h-[120px] w-full flex justify-start items-center md:pr-15 border-b border-gray-600 py-4 md:py-0">
+          <h1 className="text-4xl md:text-7xl font-[800] pb-3">professional experience.</h1>
+        </div>
+
+        {/* Main Content */}
+        <div className="flex flex-col md:flex-row">
+          {/* INDEX SIDE */}
+          <div className="md:w-1/3 w-full font-poppins py-8 md:py-12 md:sticky md:top-28 md:h-[calc(100vh-7rem)] md:overflow-y-auto">
+            <p className="text-2xl md:text-4xl font-[700] mb-6">timeline.</p>
+
+            <ul className="flex flex-row md:flex-col gap-4 md:gap-5 text-base md:text-lg overflow-x-auto md:overflow-x-visible pb-4 md:pb-0">
+              <li className="flex-shrink-0 md:flex-shrink">
+                <a
+                  href="#exp-fgp"
+                  className="hover:text-green-600 transition-colors duration-300 whitespace-nowrap"
+                >
+                  /2025-2026 FGP Trading
+                </a>
+              </li>
+              {/* Add more experiences here as needed */}
+              <li className="flex-shrink-0 md:flex-shrink opacity-60">
+                <span className="whitespace-nowrap cursor-default">
+                  /More experiences coming soon...
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          {/* EXPERIENCE DETAILS SIDE */}
+          <div className="md:w-2/3 w-full p-4 md:p-10 md:border-l border-gray-600 flex flex-col gap-16 md:gap-28">
+            {/* FGP Experience */}
+            <div id="exp-fgp" className="w-full scroll-mt-24 md:scroll-mt-32">
+              {/* Header Row */}
+              <div className="flex flex-col md:flex-row py-4 px-4 md:px-8 items-start md:items-center border-b-2 border-gray-600 border-dashed gap-3 md:gap-0">
+                <div className="flex gap-4 md:gap-10 items-center flex-1">
+                  <div>
+                    <p className="text-lg md:text-[25px] font-bold">Frontend Developer Intern</p>
+                    <p className="text-gray-600 text-sm md:text-base mt-1">FGP Fortunegod Philippines Trading Inc.</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-2 md:gap-3 text-[8px] md:text-[10px]">
+                  {["React.js", "TypeScript", "ReactBits", "UI/UX", "Responsive Design", "Git"].map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-2 md:px-3 py-1 bg-black text-white font-medium hover:bg-gray-800 cursor-pointer transition-colors duration-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Description + Image */}
+              <div className="w-full px-4 md:px-8 py-5">
+                <div className="pb-5 text-gray-700 leading-relaxed text-sm md:text-base">
+                  <p className="text-lg md:text-xl font-semibold text-gray-800 mb-4">Key Responsibilities & Achievements:</p>
+                  
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <div className="min-w-[8px] h-[8px] bg-green-600 rounded-full mt-2 mr-3"></div>
+                      <p className="leading-relaxed">
+                        Maintained and enhanced a <span className="font-semibold">React.js + TypeScript</span> codebase following existing architecture and coding standards.
+                      </p>
+                    </li>
+                    
+                    <li className="flex items-start">
+                      <div className="min-w-[8px] h-[8px] bg-green-600 rounded-full mt-2 mr-3"></div>
+                      <p className="leading-relaxed">
+                        Developed <span className="font-semibold">reusable, component-based UI features</span> to improve scalability and maintainability.
+                      </p>
+                    </li>
+                    
+                    <li className="flex items-start">
+                      <div className="min-w-[8px] h-[8px] bg-green-600 rounded-full mt-2 mr-3"></div>
+                      <p className="leading-relaxed">
+                        Integrated UI animations using <span className="font-semibold">ReactBits</span>, increasing user engagement and visual appeal.
+                      </p>
+                    </li>
+                    
+                    <li className="flex items-start">
+                      <div className="min-w-[8px] h-[8px] bg-green-600 rounded-full mt-2 mr-3"></div>
+                      <p className="leading-relaxed">
+                        Designed and implemented a <span className="font-semibold">dynamic logo marquee</span> to showcase partner brands.
+                      </p>
+                    </li>
+                    
+                    <li className="flex items-start">
+                      <div className="min-w-[8px] h-[8px] bg-green-600 rounded-full mt-2 mr-3"></div>
+                      <p className="leading-relaxed">
+                        Built a <span className="font-semibold">Partners page</span> and <span className="font-semibold">Contact Us module</span> with form handling and validation.
+                      </p>
+                    </li>
+                    
+                    <li className="flex items-start">
+                      <div className="min-w-[8px] h-[8px] bg-green-600 rounded-full mt-2 mr-3"></div>
+                      <p className="leading-relaxed">
+                        Collaborated with <span className="font-semibold">cross-functional teams</span> to translate business requirements into responsive web interfaces.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Add more experiences following the same structure */}
           </div>
         </div>
       </section>
