@@ -1,219 +1,164 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 const fgpResponsibilities = [
-  <>
-    Maintained and enhanced a{" "}
-    <span className="font-semibold">React.js + TypeScript</span> codebase
-    following existing architecture and coding standards.
-  </>,
-  <>
-    Developed{" "}
-    <span className="font-semibold">reusable, component-based UI features</span>{" "}
-    to improve scalability and maintainability.
-  </>,
-  <>
-    Integrated UI animations using{" "}
-    <span className="font-semibold">ReactBits</span>, increasing user engagement
-    and visual appeal.
-  </>,
-  <>
-    Designed and implemented a{" "}
-    <span className="font-semibold">dynamic logo marquee</span> to showcase
-    partner brands.
-  </>,
-  <>
-    Built a <span className="font-semibold">Partners page</span> and{" "}
-    <span className="font-semibold">Contact Us module</span> with form handling
-    and validation.
-  </>,
-  <>
-    Collaborated with{" "}
-    <span className="font-semibold">cross-functional teams</span> to translate
-    business requirements into responsive web interfaces.
-  </>,
+  <>Maintained and enhanced a <span className="font-semibold text-green-400">React.js + TypeScript</span> codebase following existing architecture and coding standards.</>,
+  <>Developed <span className="font-semibold text-green-400">reusable, component-based UI features</span> to improve scalability and maintainability.</>,
+  <>Integrated UI animations using <span className="font-semibold text-green-400">ReactBits</span>, increasing user engagement and visual appeal.</>,
+  <>Designed and implemented a <span className="font-semibold text-green-400">dynamic logo marquee</span> to showcase partner brands.</>,
+  <>Built a <span className="font-semibold text-green-400">Partners page</span> and <span className="font-semibold text-green-400">Contact Us module</span> with form handling and validation.</>,
+  <>Collaborated with <span className="font-semibold text-green-400">cross-functional teams</span> to translate business requirements into responsive web interfaces.</>,
 ];
 
 const kwaniiResponsibilities = [
-  <>
-    Learned fundamental game development concepts using{" "}
-    <span className="font-semibold">Unity and C#</span>, including scene
-    management, game objects, scripting, physics, and UI systems.
-  </>,
-  <>
-    Developed <span className="font-semibold">small prototype games</span> to
-    understand gameplay mechanics, object interactions, and event-driven
-    programming.
-  </>,
-  <>
-    Implemented{" "}
-    <span className="font-semibold">
-      basic player controls, collision detection, and simple game logic
-    </span>{" "}
-    using C#.
-  </>,
-  <>
-    Used{" "}
-    <span className="font-semibold">Microsoft Power Automate</span> to automate
-    repetitive company email-sending tasks, improving workflow efficiency and
-    reducing manual work.
-  </>,
+  <>Learned fundamental game development concepts using <span className="font-semibold text-green-400">Unity and C#</span>, including scene management, game objects, scripting, physics, and UI systems.</>,
+  <>Developed <span className="font-semibold text-green-400">small prototype games</span> to understand gameplay mechanics, object interactions, and event-driven programming.</>,
+  <>Implemented <span className="font-semibold text-green-400">basic player controls, collision detection, and simple game logic</span> using C#.</>,
+  <>Used <span className="font-semibold text-green-400">Microsoft Power Automate</span> to automate repetitive company email-sending tasks, improving workflow efficiency and reducing manual work.</>,
 ];
 
-const fgpTechStack = [
-  "React.js",
-  "TypeScript",
-  "ReactBits",
-  "UI/UX",
-  "Responsive Design",
-  "Git",
-];
-
-const kwaniiTechStack = [
-  "Unity",
-  "C#",
-  "Game Development",
-  "Power Automate",
-  "Prototyping",
-  "Git",
-];
+const fgpTechStack = ["React.js", "TypeScript", "ReactBits", "UI/UX", "Git"];
+const kwaniiTechStack = ["Unity", "C#", "Power Automate", "Git"];
 
 export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="px-4 sm:px-8 md:p-20 min-h-screen font-poppins"
+      className="px-4 sm:px-8 md:p-20 min-h-screen font-poppins bg-background text-white"
     >
       {/* Header */}
-      <div className="h-auto md:h-[120px] w-full flex justify-start items-center md:pr-15 border-b border-gray-600 py-4 md:py-0">
-        <h1 className="text-4xl md:text-7xl font-[800] pb-3">
-          professional experience.
-        </h1>
-      </div>
+      <motion.div
+        className="h-auto md:h-[120px] w-full flex justify-start items-center md:pr-15 border-b border-zinc-700 py-4 md:py-0"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <h1 className="text-4xl md:text-7xl font-[800] pb-3">professional experience.</h1>
+      </motion.div>
 
       <div className="flex flex-col md:flex-row">
-        {/* Timeline Index */}
-        <div className="md:w-1/3 w-full font-poppins py-8 md:py-12 md:sticky md:top-28 md:h-[calc(100vh-7rem)] md:overflow-y-auto">
+        {/* Timeline index */}
+        <motion.div
+          className="md:w-1/3 w-full font-poppins py-8 md:py-12 md:sticky md:top-28 md:h-[calc(100vh-7rem)] md:overflow-y-auto"
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        >
           <p className="text-2xl md:text-4xl font-[700] mb-6">timeline.</p>
           <ul className="flex flex-row md:flex-col gap-4 md:gap-5 text-base md:text-lg overflow-x-auto md:overflow-x-visible pb-4 md:pb-0">
             <li className="flex-shrink-0 md:flex-shrink">
-              <a
-                href="#exp-fgp"
-                className="hover:text-green-600 transition-colors duration-300 whitespace-nowrap"
-              >
+              <a href="#exp-fgp" className="text-white hover:text-green-400 transition-colors duration-300 whitespace-nowrap">
                 /2025-2026 FGP Trading
               </a>
             </li>
             <li className="flex-shrink-0 md:flex-shrink">
-              <a
-                href="#exp-kwanii"
-                className="hover:text-green-600 transition-colors duration-300 whitespace-nowrap"
-              >
+              <a href="#exp-kwanii" className="text-white hover:text-green-400 transition-colors duration-300 whitespace-nowrap">
                 /Feb 2026 Kwanii Inc.
               </a>
             </li>
             <li className="flex-shrink-0 md:flex-shrink opacity-60">
-              <span className="whitespace-nowrap cursor-default">
-                /More experiences coming soon...
-              </span>
+              <span className="whitespace-nowrap cursor-default">/More experiences coming soon...</span>
             </li>
           </ul>
-        </div>
+        </motion.div>
 
-        {/* Experience Details */}
-        <div className="md:w-2/3 w-full p-4 md:p-10 md:border-l border-gray-600 flex flex-col gap-16 md:gap-28">
-          {/* FGP Trading Experience */}
-          <div id="exp-fgp" className="w-full scroll-mt-24 md:scroll-mt-32">
-            {/* Header Row */}
-            <div className="flex flex-col md:flex-row py-4 px-4 md:px-8 items-start md:items-center border-b-2 border-gray-600 border-dashed gap-3 md:gap-0">
-              <div className="flex gap-4 md:gap-10 items-center flex-1">
-                <div>
-                  <p className="text-lg md:text-[25px] font-bold">
-                    Frontend Developer Intern
-                  </p>
-                  <p className="text-gray-600 text-sm md:text-base mt-1">
-                    FGP Fortunegod Philippines Trading Inc.
-                  </p>
-                  <p className="text-gray-500 text-xs md:text-sm mt-1">
-                    2025 - 2026
-                  </p>
-                </div>
+        <div className="md:w-2/3 w-full p-4 md:p-10 md:border-l border-zinc-700 flex flex-col gap-16 md:gap-28">
+          {/* FGP */}
+          <motion.div
+            id="exp-fgp"
+            className="w-full scroll-mt-24 md:scroll-mt-32"
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.15 }}
+            variants={{ hidden: {}, show: { transition: { staggerChildren: 0.1 } } }}
+          >
+            <motion.div
+              className="flex flex-col md:flex-row py-4 px-4 md:px-8 items-start md:items-stretch border-b-2 border-zinc-700 border-dashed gap-4 md:gap-6"
+              variants={fadeUp}
+            >
+              <div className="flex-1 min-w-0">
+                <p className="text-lg md:text-[25px] font-bold text-white break-words">Frontend Developer Intern</p>
+                <p className="text-green-400 text-sm md:text-base mt-1 break-words">FGP Fortunegod Philippines Trading Inc.</p>
+                <p className="text-white text-xs md:text-sm mt-1">2025 - 2026</p>
               </div>
-              <div className="flex flex-wrap items-center gap-2 md:gap-3 text-[8px] md:text-[10px]">
+              <div className="flex flex-wrap items-end gap-2 md:gap-2.5 shrink-0">
                 {fgpTechStack.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-2 md:px-3 py-1 bg-black text-white font-medium hover:bg-gray-800 cursor-pointer transition-colors duration-300"
-                  >
+                  <span key={i} className="px-2 md:px-2.5 py-1 bg-foreground text-background font-medium hover:opacity-80 cursor-pointer transition-opacity duration-300 text-[10px] md:text-[11px] whitespace-nowrap">
                     {tech}
                   </span>
                 ))}
               </div>
-            </div>
-
-            {/* Description */}
-            <div className="w-full px-4 md:px-8 py-5">
-              <div className="pb-5 text-gray-700 leading-relaxed text-sm md:text-base">
-                <p className="text-lg md:text-xl font-semibold text-gray-800 mb-4">
-                  Key Responsibilities & Achievements:
-                </p>
+            </motion.div>
+            <motion.div className="w-full px-4 md:px-8 py-5" variants={fadeUp}>
+              <div className="pb-5 text-white leading-relaxed text-sm md:text-base">
+                <p className="text-lg md:text-xl font-semibold text-green-400 mb-4">Key Responsibilities & Achievements:</p>
                 <ul className="space-y-4">
                   {fgpResponsibilities.map((item, i) => (
-                    <li key={i} className="flex items-start">
-                      <div className="min-w-[8px] h-[8px] bg-green-600 rounded-full mt-2 mr-3" />
-                      <p className="leading-relaxed">{item}</p>
-                    </li>
+                    <motion.li
+                      key={i}
+                      className="flex items-start gap-3"
+                      variants={fadeUp}
+                    >
+                      <div className="min-w-[8px] w-[8px] h-[8px] bg-green-400 rounded-full mt-2 shrink-0" />
+                      <p className="leading-relaxed flex-1 break-words">{item}</p>
+                    </motion.li>
                   ))}
                 </ul>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          {/* Kwanii Inc. Experience */}
-          <div id="exp-kwanii" className="w-full scroll-mt-24 md:scroll-mt-32">
-            {/* Header Row */}
-            <div className="flex flex-col md:flex-row py-4 px-4 md:px-8 items-start md:items-center border-b-2 border-gray-600 border-dashed gap-3 md:gap-0">
-              <div className="flex gap-4 md:gap-10 items-center flex-1">
-                <div>
-                  <p className="text-lg md:text-[25px] font-bold">
-                    Information Technology Intern
-                  </p>
-                  <p className="text-gray-600 text-sm md:text-base mt-1">
-                    Kwanii Inc.
-                  </p>
-                  <p className="text-gray-500 text-xs md:text-sm mt-1">
-                    Feb 2026 - March 2026
-                  </p>
-                </div>
+          {/* Kwanii */}
+          <motion.div
+            id="exp-kwanii"
+            className="w-full scroll-mt-24 md:scroll-mt-32"
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.15 }}
+            variants={{ hidden: {}, show: { transition: { staggerChildren: 0.1 } } }}
+          >
+            <motion.div
+              className="flex flex-col md:flex-row py-4 px-4 md:px-8 items-start md:items-stretch border-b-2 border-zinc-700 border-dashed gap-4 md:gap-6"
+              variants={fadeUp}
+            >
+              <div className="flex-1 min-w-0">
+                <p className="text-lg md:text-[25px] font-bold text-white break-words">Information Technology Intern</p>
+                <p className="text-green-400 text-sm md:text-base mt-1 break-words">Kwanii Inc.</p>
+                <p className="text-white text-xs md:text-sm mt-1">Feb 2026 - March 2026</p>
               </div>
-              <div className="flex flex-wrap items-center gap-2 md:gap-3 text-[8px] md:text-[10px]">
+              <div className="flex flex-wrap items-end gap-2 md:gap-2.5 shrink-0">
                 {kwaniiTechStack.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-2 md:px-3 py-1 bg-black text-white font-medium hover:bg-gray-800 cursor-pointer transition-colors duration-300"
-                  >
+                  <span key={i} className="px-2 md:px-2.5 py-1 bg-foreground text-background font-medium hover:opacity-80 cursor-pointer transition-opacity duration-300 text-[10px] md:text-[11px] whitespace-nowrap">
                     {tech}
                   </span>
                 ))}
               </div>
-            </div>
-
-            {/* Description */}
-            <div className="w-full px-4 md:px-8 py-5">
-              <div className="pb-5 text-gray-700 leading-relaxed text-sm md:text-base">
-                <p className="text-lg md:text-xl font-semibold text-gray-800 mb-4">
-                  Key Responsibilities & Achievements:
-                </p>
+            </motion.div>
+            <motion.div className="w-full px-4 md:px-8 py-5" variants={fadeUp}>
+              <div className="pb-5 text-white leading-relaxed text-sm md:text-base">
+                <p className="text-lg md:text-xl font-semibold text-green-400 mb-4">Key Responsibilities & Achievements:</p>
                 <ul className="space-y-4">
                   {kwaniiResponsibilities.map((item, i) => (
-                    <li key={i} className="flex items-start">
-                      <div className="min-w-[8px] h-[8px] bg-green-600 rounded-full mt-2 mr-3" />
-                      <p className="leading-relaxed">{item}</p>
-                    </li>
+                    <motion.li
+                      key={i}
+                      className="flex items-start gap-3"
+                      variants={fadeUp}
+                    >
+                      <div className="min-w-[8px] w-[8px] h-[8px] bg-green-400 rounded-full mt-2 shrink-0" />
+                      <p className="leading-relaxed flex-1 break-words">{item}</p>
+                    </motion.li>
                   ))}
                 </ul>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>
