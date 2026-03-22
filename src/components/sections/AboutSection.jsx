@@ -36,24 +36,32 @@ export default function AboutSection() {
             className="pb-5 text-base md:text-lg leading-relaxed text-white"
             variants={{ hidden: { opacity: 0, x: -50 }, show: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } } }}
           >
-            I am currently a fourth-year student studying at the{" "}
-            <span className="font-semibold text-green-400">National College of Science and Technology</span>.
+            I'm a fourth-year Computer Science student at the{" "}
+            <span className="font-semibold text-green-400">National College of Science and Technology</span>,
+            building my way toward becoming a professional full-stack developer.
+          </motion.p>
+          <motion.p
+            className="pb-5 text-base md:text-lg leading-relaxed text-white"
+            variants={{ hidden: { opacity: 0, x: -50 }, show: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } } }}
+          >
+            I work primarily with the{" "}
+            <span className="font-semibold text-green-400">MERN stack</span> —{" "}
+            <span className="font-semibold text-green-400">MongoDB</span>,{" "}
+            <span className="font-semibold text-green-400">Express</span>,{" "}
+            <span className="font-semibold text-green-400">React</span>, and{" "}
+            <span className="font-semibold text-green-400">Node.js</span> — alongside{" "}
+            <span className="font-semibold text-green-400">TypeScript</span> and{" "}
+            <span className="font-semibold text-green-400">MySQL</span> to build
+            full-stack applications that are fast, scalable, and clean.
           </motion.p>
           <motion.p
             className="text-base md:text-lg leading-relaxed text-white"
             variants={{ hidden: { opacity: 0, x: -50 }, show: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } } }}
           >
-            As an aspiring full-stack developer, I'm passionate about building
-            smooth and engaging web experiences. I'm constantly learning and
-            improving my skills using technologies like
-            <span className="font-semibold text-green-400"> React.js</span>,{" "}
-            <span className="font-semibold text-green-400"> Node.js</span>,{" "}
-            <span className="font-semibold text-green-400"> Express</span>, and{" "}
-            <span className="font-semibold text-green-400"> MySQL</span>{" "}
-            to bring ideas to life on the web. With a strong focus on clean
-            design, functionality, and problem-solving, I'm excited to dive
-            deeper into real-world development and create meaningful solutions
-            in the digital space.
+            I care deeply about the details — from smooth UI animations to solid backend logic.
+            Whether it's a pixel-perfect interface or a well-structured API, I bring the same
+            focus and drive to every project I work on. I'm actively looking for opportunities
+            to grow, contribute, and ship things that matter.
           </motion.p>
         </motion.div>
 
