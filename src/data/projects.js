@@ -1,18 +1,19 @@
 import DUV from "../assets/DUV.png";
 import WorldPeas from "../assets/WorldPeas.png";
 import TripleJs from "../assets/TripleJs.png";
-import Finance from "../assets/Finance/Finance.png";
+import Finance from "../assets/Finance/Planding.png";
 
 export const projects = [
   {
     date: "2026",
-    projectName: "Finance Tracker",
+    projectName: "PandaPocket",
     projectImg: Finance,
     description:
       "A web-based personal finance tracking application that helps users manage their income and expenses with detailed analytics and insights. This project is currently a work in progress and actively being developed.",
     tech: ["MongoDB", "Express", "React", "TypeScript", "Node.js", "TailwindCSS"],
     hasGallery: true,
     galleryKey: "finance",
+    projectLink: "https://panda-pocket.vercel.app/"
   },
   {
     date: "2025",
@@ -23,6 +24,7 @@ export const projects = [
     tech: ["ReactJs", "TailwindCSS", "Express", "NodeJs", "MySQL"],
     hasGallery: true,
     galleryKey: "duv",
+    projectLink: "https://duv2.netlify.app/"
   },
   {
     date: "2023",
