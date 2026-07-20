@@ -22,7 +22,9 @@ export default function ProjectsSection({ onOpenGallery }) {
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h1 className="text-4xl md:text-7xl font-[800] pb-3">personal projects.</h1>
+        <h1 className="text-4xl md:text-7xl font-[800] pb-3">
+          personal projects.
+        </h1>
       </motion.div>
 
       {/* Card Grid */}
@@ -31,7 +33,10 @@ export default function ProjectsSection({ onOpenGallery }) {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.1 }}
-        variants={{ hidden: {}, show: { transition: { staggerChildren: 0.15 } } }}
+        variants={{
+          hidden: {},
+          show: { transition: { staggerChildren: 0.15 } },
+        }}
       >
         {projects.map((p, index) => (
           <motion.div
@@ -59,12 +64,12 @@ export default function ProjectsSection({ onOpenGallery }) {
 
               {/* Overlay for Gallery */}
               {p.hasGallery && (
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                   initial={false}
                   whileHover={{ opacity: 1 }}
                 >
-                  <motion.span 
+                  <motion.span
                     className="flex items-center gap-2 bg-white text-black font-semibold px-4 py-2 rounded-full text-sm shadow-lg"
                     initial={{ scale: 0.9, opacity: 0 }}
                     whileHover={{ scale: 1.05, opacity: 1 }}
@@ -77,21 +82,32 @@ export default function ProjectsSection({ onOpenGallery }) {
               )}
 
               {/* Date badge */}
-              <motion.div 
+              <motion.div
                 className="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-green-400 text-xs font-medium px-3 py-1 rounded-full"
                 whileHover={{ scale: 1.05, backgroundColor: "rgba(0,0,0,0.8)" }}
               >
                 {p.date}
               </motion.div>
 
+              {p.underDevelopment && (
+                <motion.div
+                  className="absolute top-3 right-3 bg-amber-500/90 backdrop-blur-sm text-black text-xs font-semibold px-3 py-1 rounded-full border border-amber-300 shadow-lg"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  🚧 Under Development
+                </motion.div>
+              )}
+
               {/* Gallery indicator badge - shows this image is clickable for gallery */}
               {p.hasGallery && (
-                <motion.div 
+                <motion.div
                   className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-xs font-medium px-2 py-1 rounded-md flex items-center gap-1"
                   initial={{ opacity: 0.7 }}
                   whileHover={{ opacity: 1, scale: 1.05 }}
-                >
-                </motion.div>
+                ></motion.div>
               )}
             </div>
 
@@ -105,7 +121,9 @@ export default function ProjectsSection({ onOpenGallery }) {
               </div>
 
               {/* Description */}
-              <p className="text-white text-sm leading-relaxed flex-1 line-clamp-3">{p.description}</p>
+              <p className="text-white text-sm leading-relaxed flex-1 line-clamp-3">
+                {p.description}
+              </p>
 
               {/* Tech pills */}
               <div className="flex flex-wrap gap-2 pt-2 border-t border-zinc-700">
@@ -131,7 +149,10 @@ export default function ProjectsSection({ onOpenGallery }) {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <Image size={18} className="group-hover/btn:rotate-3 transition-transform" />
+                    <Image
+                      size={18}
+                      className="group-hover/btn:rotate-3 transition-transform"
+                    />
                     <span>View Gallery</span>
                   </motion.button>
                 )}
@@ -146,9 +167,15 @@ export default function ProjectsSection({ onOpenGallery }) {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <LinkIcon size={18} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                    <LinkIcon
+                      size={18}
+                      className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform"
+                    />
                     <span>Live Demo</span>
-                    <ArrowUpRight size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                    <ArrowUpRight
+                      size={14}
+                      className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform"
+                    />
                   </motion.a>
                 )}
 
@@ -167,7 +194,7 @@ export default function ProjectsSection({ onOpenGallery }) {
               initial={false}
               whileHover={{
                 boxShadow: "0 0 20px rgba(74, 222, 128, 0.3)",
-                transition: { duration: 0.3 }
+                transition: { duration: 0.3 },
               }}
             />
           </motion.div>

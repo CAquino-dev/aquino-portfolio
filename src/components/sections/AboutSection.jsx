@@ -36,7 +36,7 @@ export default function AboutSection() {
             className="pb-5 text-base md:text-lg leading-relaxed text-white"
             variants={{ hidden: { opacity: 0, x: -50 }, show: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } } }}
           >
-            I'm a fourth-year Computer Science student at the{" "}
+           I am a Bachelor of Science in Information Technology graduate from the{" "}
             <span className="font-semibold text-green-400">National College of Science and Technology</span>,
             building my way toward becoming a professional full-stack developer.
           </motion.p>

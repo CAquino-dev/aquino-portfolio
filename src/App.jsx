@@ -10,10 +10,12 @@ import ProjectGalleryDialog from "./components/ProjectGalleryDialog";
 
 import { duvGallery } from "./data/duvGallery";
 import { financeGallery } from "./data/financeGallery";
+import { CICDGallery } from "./data/CICDGallery";
 
 const galleries = {
   duv:     { gallery: duvGallery },
   finance: { gallery: financeGallery },
+  cicd:    { gallery: CICDGallery },
 };
 
 function App() {

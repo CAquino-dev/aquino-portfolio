@@ -2,8 +2,20 @@ import DUV from "../assets/DUV.png";
 import WorldPeas from "../assets/WorldPeas.png";
 import TripleJs from "../assets/TripleJs.png";
 import Finance from "../assets/Finance/Planding.png";
+import CiCdDashboard from "../assets/CICD/CiCdDashboard.png";
 
 export const projects = [
+  {
+    date: "2026",
+    projectName: "CI / CD Dashboard",
+    projectImg: CiCdDashboard,
+    description:
+      "A web application that monitors builds from GitHub Actions, Jenkins, and GitLab, provides real-time updates, analytics, alerts, and AI-powered failure explanations.",
+    tech: ["PostgreSQL", "Express", "React", "TypeScript", "Node.js", "TailwindCSS"],
+    hasGallery: true,
+    galleryKey: "cicd",
+    underDevelopment: true,
+  },
   {
     date: "2026",
     projectName: "PandaPocket",
