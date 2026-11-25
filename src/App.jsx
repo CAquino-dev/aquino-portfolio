@@ -11,11 +11,13 @@ import ProjectGalleryDialog from "./components/ProjectGalleryDialog";
 import { duvGallery } from "./data/duvGallery";
 import { financeGallery } from "./data/financeGallery";
 import { CICDGallery } from "./data/CICDGallery";
+import { sonicMetricsGallery } from "./data/sonicGallery";
 
 const galleries = {
   duv:     { gallery: duvGallery },
   finance: { gallery: financeGallery },
   cicd:    { gallery: CICDGallery },
+  sonicMetrics: { gallery: sonicMetricsGallery },
 };
 
 function App() {

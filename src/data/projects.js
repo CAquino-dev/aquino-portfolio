@@ -3,8 +3,28 @@ import WorldPeas from "../assets/WorldPeas.png";
 import TripleJs from "../assets/TripleJs.png";
 import Finance from "../assets/Finance/Planding.png";
 import CiCdDashboard from "../assets/CICD/CiCdDashboard.png";
+import SonicMetrics from "../assets/Sonic_Metrics/soniclanding.png";
 
 export const projects = [
+  {
+    date: "2026",
+    projectName: "Sonic Metrics",
+    projectImg: SonicMetrics,
+    description:
+      "A Spotify analytics application that allows users to connect their Spotify accounts and explore their listening activity through personalized music insights and data visualizations.",
+    tech: [
+      "PostgreSQL",
+      "FastAPI",
+      "Python",
+      "React",
+      "TypeScript",
+      "Spotify API",
+    ],
+    hasGallery: true,
+    galleryKey: "sonicMetrics",
+    projectLink: "https://sonicmetrics.duckdns.org/",
+    underDevelopment: true,
+  },
   {
     date: "2026",
     projectName: "CI / CD Dashboard",
@@ -25,7 +45,7 @@ export const projects = [
     tech: ["MongoDB", "Express", "React", "TypeScript", "Node.js", "TailwindCSS"],
     hasGallery: true,
     galleryKey: "finance",
-    projectLink: "https://panda-pocket.vercel.app/"
+    projectLink: "https://panda-pocket.vercel.app/",
   },
   {
     date: "2025",
@@ -36,15 +56,15 @@ export const projects = [
     tech: ["ReactJs", "TailwindCSS", "Express", "NodeJs", "MySQL"],
     hasGallery: true,
     galleryKey: "duv",
-    projectLink: "https://duv2.netlify.app/"
+    projectLink: "https://duv2.netlify.app/",
   },
   {
     date: "2023",
     projectName: "Triple J's",
     projectImg: TripleJs,
-    description: `TripleJs is an e-commerce website for pet food and supplies, 
-      featuring a user-friendly shopping experience. 
-      It includes an admin dashboard for easy product management, inventory updates, 
+    description: `TripleJs is an e-commerce website for pet food and supplies,
+      featuring a user-friendly shopping experience.
+      It includes an admin dashboard for easy product management, inventory updates,
       and order tracking—making it a complete solution for modern pet retail.`,
     tech: ["ReactJs", "CSS", "MySQL", "NodeJs", "Express"],
     hasGallery: false,
@@ -53,7 +73,7 @@ export const projects = [
     date: "2022",
     projectName: "WorldPeas",
     projectImg: WorldPeas,
-    description: `WorldPeas is a practice e-commerce project built to simulate a real online marketplace, 
+    description: `WorldPeas is a practice e-commerce project built to simulate a real online marketplace,
       it focuses on clean design, smooth shopping experiences, and efficient product management.`,
     tech: ["HTML", "CSS", "JavaScript"],
     hasGallery: false,

@@ -23,17 +23,39 @@ const kwaniiResponsibilities = [
 ];
 
 const accentureResponsibilities = [
-  <>Completed Accenture's <span className="font-semibold text-green-400">Cybersecurity Bootcamp</span>, gaining foundational knowledge of security operations, threat detection, and enterprise security practices.</>,
-  <>Completed the <span className="font-semibold text-green-400">SAP Bootcamp</span>, learning core SAP concepts, business processes, and enterprise application workflows.</>,
-  <>Participated in <span className="font-semibold text-green-400">hands-on technical training</span> and guided exercises to strengthen cybersecurity and enterprise technology fundamentals.</>,
-  <>Built a strong understanding of <span className="font-semibold text-green-400">security best practices</span>, risk awareness, and secure IT operations within an enterprise environment.</>,
-  <>Collaborated with fellow associates during <span className="font-semibold text-green-400">bootcamp activities and knowledge-sharing sessions</span> to reinforce technical concepts and problem-solving skills.</>,
-  <>Continuously expanded technical expertise through <span className="font-semibold text-green-400">instructor-led training, assessments, and self-paced learning</span>.</>,
+  <>
+    Managed enterprise user accounts, including{" "}
+    <span className="font-semibold text-green-400">
+      account creation, role assignments, password resets, and access provisioning
+    </span>
+    .
+  </>,
+  <>
+    Investigated and resolved{" "}
+    <span className="font-semibold text-green-400">
+      user access and authorization issues
+    </span>{" "}
+    by analyzing permission configurations, troubleshooting access errors, and identifying access gaps.
+  </>,
+  <>
+    Developed a{" "}
+    <span className="font-semibold text-green-400">
+      Python desktop automation application using Tkinter and Excel integration
+    </span>{" "}
+    to automate individual user account email distribution, eliminating repetitive manual email preparation and streamlining account information delivery.
+  </>,
 ];
 
 const fgpTechStack = ["React.js", "TypeScript", "ReactBits", "UI/UX", "Git"];
 const kwaniiTechStack = ["Unity", "C#", "Power Automate", "Git"];
-const accentureTechStack = ["Cybersecurity", "SAP", "Enterprise Technology"];
+const accentureTechStack = [
+  "SAP Security",
+  "SAP GUI",
+  "Python",
+  "Tkinter",
+  "Excel",
+  "IAM",
+];
 
 export default function ExperienceSection() {
   return (

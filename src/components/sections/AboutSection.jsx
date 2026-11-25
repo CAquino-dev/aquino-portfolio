@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import kuri from "../../assets/kuri.jpg";
+import kuri from "../../assets/kurisu.png";
 
 export default function AboutSection() {
   return (
